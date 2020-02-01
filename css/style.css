@@ -47,6 +47,36 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* BOXES */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 1600px;
+  margin-top: auto;
+  }
+  
+  .collection {
+  background-color: var(--light-blue-color);
+  min-height: 677px;
+  }
+
+  .featured {
+  min-height: 1035px;
+  }
+
+  .news {
+    min-height: 1029px;
+    background-color: var(--light-blue-color);
+    }
+
 /* TOP-HEADER */
 .top-header {
   display: flex;
@@ -121,6 +151,13 @@ body {
 }
 .nav-contacts-link:active {
   color: var(--active-color);
+}
+
+/* BENEFITS */
+.nav-benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ICON-NAVIGATION */
@@ -430,12 +467,6 @@ body {
   margin-right: auto;
 } */
 
-/* BENEFITS */
-.nav-benefits {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* LOGO */
 .logo {
@@ -477,7 +508,6 @@ body {
   color: var(--active-color);
 }
 
-/* SITE-NAV */
 .site-nav {
   display: flex;
   align-content: center;
@@ -490,37 +520,8 @@ body {
   padding-left: 0;
 }
 
-.products-section {
-  margin-bottom: 103px;
-}
-
 /* COLLECTION */
 
-.box {
-display: flex;
-justify-content: center;
-align-items: center; 
-width: 1600px;
-margin-top: auto;
-margin-bottom: 100px;
-}
-
-.collection {
-background-color: var(--light-blue-color);
-min-height: 677px;
-}
-.featured {
-min-height: 1035px;
-}
-.news {
-  min-height: 1029px;
-  background-color: var(--light-blue-color);
-  }
-
-.letter {
-  background-image: url('../image/letter/submit.png');
-  min-height: 462px;
-} 
 .container-title {
   min-height: 79px;
   margin-bottom: 71px;
@@ -602,7 +603,6 @@ min-height: 1035px;
 }
 
 .button-add {
-  display: block;
   top: 0;
   left: 0;
   display: flex;
@@ -672,7 +672,7 @@ min-height: 1035px;
   text-align: center;
 }
 
-.collection-img {
+.collection-img .products-img {
   display: block;
   max-width: 100%;
   max-height: auto;
@@ -783,6 +783,10 @@ min-height: 1035px;
   font-weight: 900;
   font-size: 48px;
   line-height: 0.66;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center
 }
 
 .products-title::after {
@@ -843,8 +847,11 @@ min-height: 1035px;
 .products-price:active {
   color: var(--active-color);
 }
+
 /* PRODUCTS-LINE */
 .products-line {
+  position: relative;
+  list-style: none;
   font-family: var(--title-font-stack);
   font-size: 18px;
   line-height: 1.77;
@@ -875,6 +882,15 @@ min-height: 1035px;
 .products-link:active {
   color: var(--active-color);
 }
+
+.products-line:hover .overlay::before {
+  display: block;
+}
+
+.products-line:hover .container-action {
+  display: flex;
+}
+
 /* PRODUCTS-LINK-DESCRIPTION */
 .products-link-description {
   margin: 0;
@@ -1012,22 +1028,24 @@ min-height: 1035px;
   margin-bottom: 15px;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
-.letter-section {
+/* LETTER */
+
+.letter {
   background-image: url('../image/letter/submit.png');
+  min-height: 462px;
+} 
+.container-newsletter {
+  margin-bottom: 31px;
 }
-
 .title-letter {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 48px;
   line-height: 0.66;
-  margin-top: 0;
+  text-align: center;
+  color: #515151;
+  margin: 0;
 }
 
 .title-letter::after {
@@ -1040,4 +1058,54 @@ img {
   background-size: contain;
   background-position: center;
   margin-top: 31px;
+}
+
+.letter-text {
+margin: 0;
+padding: 0;
+text-align: center;
+color: var(--white-color);
+margin-bottom: 40px;
+font-family: inherit;
+font-size: 16px;
+line-height: 1.625;
+margin-bottom: 40px;
+}
+
+.submit {
+  width: 550px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1 solid red;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .label-email {
+  width: calc(550px - 189px);
+} */
+
+input {
+font-family: inherit;
+font-size: 16px;
+color: var(--white-color);
+width: 450px;
+height: 64px;
+border: 1px solid var(--white-color);
+text-indent: 28px;
+}
+
+.submit-button {
+  display: block;
+  width: 100px;
+  height: 64px;
+  border: 2px solid var(--white-color);
+  background-image: url('../image/icon/submit.png');
+  background-color: #4ec6ab;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  text-decoration: none;
+
 }
