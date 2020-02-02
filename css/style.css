@@ -82,9 +82,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50px;
   background-color: var(--accent-color);
-  height: 50px;
-  margin-bottom: 34px;
 }
 
 /* CONTAINER */
@@ -100,7 +99,6 @@ img {
 
 /* NAVBAR */
 .navbar {
-  margin-bottom: 34px;
   min-height: 42px;
 }
 
@@ -158,6 +156,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 90px;
 }
 
 /* ICON-NAVIGATION */
@@ -217,7 +216,6 @@ img {
   background-position: center;
   background-size: cover;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .banner-title {
@@ -281,9 +279,14 @@ img {
 }
 
 /* ABOUT */
-.section-about {
-  margin-bottom: 80px;
-}
+
+.about {
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
 .about-list {
   list-style: none;
   display: flex;
@@ -949,7 +952,13 @@ img {
   margin-right: 30px;
 }
 
+.news-item {
+position: relative;
+}
+
 .news-link {
+  position: absolute;
+  left: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -997,6 +1006,21 @@ img {
   line-height: 1.44;
   font-weight: 600;
 }
+.article-title {
+  margin-bottom: 30px;
+}
+.article-title::after {
+  content: '';
+  display: flex;
+  width: 136px;
+  height: 3px;
+  background-image: url('../image/icon/Rectangle\ 35.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 15px;
+
+}
 .news-transport-title {
   font-size: 18px;
   line-height: 1.44;
@@ -1011,17 +1035,17 @@ img {
 .news-information-title {
   margin: 0;
   text-align: left;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 .news-library-title {
   margin: 0;
   text-align: left;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 .news-transport-title {
   margin: 0;
   text-align: left;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 /* NEWS-IMG */
 .news-img {
@@ -1082,14 +1106,10 @@ margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
-/* .label-email {
-  width: calc(550px - 189px);
-} */
 
 input {
 font-family: inherit;
 font-size: 16px;
-color: var(--white-color);
 width: 450px;
 height: 64px;
 border: 1px solid var(--white-color);
