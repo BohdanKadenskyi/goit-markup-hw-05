@@ -43,7 +43,6 @@ body {
 }
 
 .page {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,7 +58,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; 
-  width: 1600px;
   margin-top: auto;
   }
   
@@ -73,7 +71,7 @@ img {
   }
 
   .news {
-    min-height: 1029px;
+    min-height: 850px;
     background-color: var(--light-blue-color);
     }
 
@@ -121,6 +119,9 @@ img {
 
 .nav-contacts-link,
 .nav-register-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 14px;
   line-height: 0.7857;
@@ -334,7 +335,7 @@ img {
 }
 
 .icon-setting {
-  display: inline-block;
+  display: block;
   width: 66px;
   height: 66px;
   background-image: url('../image/icon/setting.png');
@@ -368,7 +369,7 @@ img {
 } */
 
 .icon-money {
-  display: inline-block;
+  display: block;
   width: 66px;
   height: 66px;
   background-image: url('../image/icon/moneyback.png');
@@ -403,7 +404,7 @@ img {
 } */
 
 .icon-world {
-  display: inline-block;
+  display: block;
   width: 66px;
   height: 66px;
   background-image: url('../image/icon/world.png');
@@ -437,7 +438,7 @@ img {
 } */
 
 .icon-compass {
-  display: inline-block;
+  display: block;
   width: 66px;
   height: 66px;
   background-image: url('../image/icon/compass.png');
@@ -493,7 +494,7 @@ img {
 
 /* NAV-LINK */
 .nav-link {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   font-family: var(--title-font-stack);
   padding: 16px;
@@ -636,6 +637,14 @@ img {
   margin-right: 18px;
 }
 
+.button-add:hover,
+.button-add:focus {
+  background-color: var(--accent-color);
+}
+.button-add:active {
+  background-color: var(--active-color);
+}
+
 .card .overlay {
   position: relative;
 }
@@ -715,6 +724,15 @@ img {
   margin-right: 6px;
 }
 
+.action-item:hover,
+.action-item:focus {
+  background-color: var(--accent-color);
+}
+
+.action-item:active {
+  background-color: var(--active-color);
+}
+
 /* .action-button {
   width: 50px;
   height: 50px;
@@ -750,9 +768,7 @@ img {
   border: 0;
   cursor: pointer;
 }
-.item-arrows {
-  background-color: var(--accent-color);
-}
+
 .icon-clock {
   display: block;
   width: 24px;
@@ -909,7 +925,6 @@ img {
 
 /* NEW-SECTION */
 .news-section {
-  margin-bottom: 47px;
 }
 
 /* TITLE-NEWS */
@@ -952,26 +967,22 @@ img {
   margin-right: 30px;
 }
 
-.news-item {
-position: relative;
-}
-
 .news-link {
-  position: absolute;
-  left: 0;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--accent-color);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.625;
   font-weight: 300;
   width: 160px;
   height: 51px;
   border-radius: 5px;
   cursor: pointer;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 .news-link:hover,
